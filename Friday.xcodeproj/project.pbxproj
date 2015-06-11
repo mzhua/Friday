@@ -14,6 +14,9 @@
 		8566126D1B29A9BB002FD9FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8566126C1B29A9BB002FD9FB /* Images.xcassets */; };
 		856612701B29A9BB002FD9FB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8566126E1B29A9BB002FD9FB /* LaunchScreen.xib */; };
 		8566127C1B29A9BB002FD9FB /* FridayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8566127B1B29A9BB002FD9FB /* FridayTests.m */; };
+		8566128A1B29B4FD002FD9FB /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856612891B29B4FD002FD9FB /* DetailViewController.m */; };
+		8566128D1B29B698002FD9FB /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8566128C1B29B698002FD9FB /* BaseViewController.m */; };
+		856612941B29C17D002FD9FB /* ImageSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 856612931B29C17D002FD9FB /* ImageSliderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		856612751B29A9BB002FD9FB /* FridayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FridayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8566127A1B29A9BB002FD9FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8566127B1B29A9BB002FD9FB /* FridayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FridayTests.m; sourceTree = "<group>"; };
+		856612881B29B4FD002FD9FB /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		856612891B29B4FD002FD9FB /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		8566128B1B29B698002FD9FB /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		8566128C1B29B698002FD9FB /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		856612921B29C17D002FD9FB /* ImageSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSliderView.h; sourceTree = "<group>"; };
+		856612931B29C17D002FD9FB /* ImageSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageSliderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +90,7 @@
 		8566125E1B29A9BB002FD9FB /* Friday */ = {
 			isa = PBXGroup;
 			children = (
+				856612911B29C154002FD9FB /* ImageSlider */,
 				856612631B29A9BB002FD9FB /* AppDelegate.h */,
 				856612641B29A9BB002FD9FB /* AppDelegate.m */,
 				856612661B29A9BB002FD9FB /* ViewController.h */,
@@ -89,6 +99,10 @@
 				8566126C1B29A9BB002FD9FB /* Images.xcassets */,
 				8566126E1B29A9BB002FD9FB /* LaunchScreen.xib */,
 				8566125F1B29A9BB002FD9FB /* Supporting Files */,
+				856612881B29B4FD002FD9FB /* DetailViewController.h */,
+				856612891B29B4FD002FD9FB /* DetailViewController.m */,
+				8566128B1B29B698002FD9FB /* BaseViewController.h */,
+				8566128C1B29B698002FD9FB /* BaseViewController.m */,
 			);
 			path = Friday;
 			sourceTree = "<group>";
@@ -117,6 +131,15 @@
 				8566127A1B29A9BB002FD9FB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		856612911B29C154002FD9FB /* ImageSlider */ = {
+			isa = PBXGroup;
+			children = (
+				856612921B29C17D002FD9FB /* ImageSliderView.h */,
+				856612931B29C17D002FD9FB /* ImageSliderView.m */,
+			);
+			path = ImageSlider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +243,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				856612681B29A9BB002FD9FB /* ViewController.m in Sources */,
+				8566128D1B29B698002FD9FB /* BaseViewController.m in Sources */,
 				856612651B29A9BB002FD9FB /* AppDelegate.m in Sources */,
 				856612621B29A9BB002FD9FB /* main.m in Sources */,
+				8566128A1B29B4FD002FD9FB /* DetailViewController.m in Sources */,
+				856612941B29C17D002FD9FB /* ImageSliderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

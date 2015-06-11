@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  BaseViewController.h
 //  Friday
 //
 //  Created by hua on 15/6/11.
 //  Copyright (c) 2015年 wonders. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface ViewController : BaseViewController
-
+@interface BaseViewController : UIViewController
 
 @end
-
