@@ -30,7 +30,6 @@
 @protocol ImageSliderDelegate<NSObject>
 
 @optional
-
 -(void)imageSliderView:(ImageSliderView *)imageSliderView didTapAtIndex:(NSInteger)index image:(UIImage *)image;
 
 @end

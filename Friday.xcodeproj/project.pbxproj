@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2AD7AE71207736B24F0547 /* libPods-Friday.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30306E9E8F6B423C8E82F196 /* libPods-Friday.a */; };
 		856612621B29A9BB002FD9FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 856612611B29A9BB002FD9FB /* main.m */; };
 		856612651B29A9BB002FD9FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 856612641B29A9BB002FD9FB /* AppDelegate.m */; };
 		856612681B29A9BB002FD9FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856612671B29A9BB002FD9FB /* ViewController.m */; };
@@ -17,6 +18,7 @@
 		8566128A1B29B4FD002FD9FB /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856612891B29B4FD002FD9FB /* DetailViewController.m */; };
 		8566128D1B29B698002FD9FB /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8566128C1B29B698002FD9FB /* BaseViewController.m */; };
 		856612941B29C17D002FD9FB /* ImageSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 856612931B29C17D002FD9FB /* ImageSliderView.m */; };
+		85EA6F621B2AB51E00ED7430 /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85EA6F611B2AB51E00ED7430 /* DetailTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C23F02628EDF1BC91D678E9 /* Pods-Friday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Friday.release.xcconfig"; path = "Pods/Target Support Files/Pods-Friday/Pods-Friday.release.xcconfig"; sourceTree = "<group>"; };
+		30306E9E8F6B423C8E82F196 /* libPods-Friday.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Friday.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8566125C1B29A9BB002FD9FB /* Friday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Friday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		856612601B29A9BB002FD9FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		856612611B29A9BB002FD9FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -49,6 +53,9 @@
 		8566128C1B29B698002FD9FB /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		856612921B29C17D002FD9FB /* ImageSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSliderView.h; sourceTree = "<group>"; };
 		856612931B29C17D002FD9FB /* ImageSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageSliderView.m; sourceTree = "<group>"; };
+		85EA6F601B2AB51E00ED7430 /* DetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewCell.h; sourceTree = "<group>"; };
+		85EA6F611B2AB51E00ED7430 /* DetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewCell.m; sourceTree = "<group>"; };
+		AB6B832FCB5B07A639738715 /* Pods-Friday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Friday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Friday/Pods-Friday.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2AD7AE71207736B24F0547 /* libPods-Friday.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,12 +77,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BB78424CDC00E61F4C155A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB6B832FCB5B07A639738715 /* Pods-Friday.debug.xcconfig */,
+				0C23F02628EDF1BC91D678E9 /* Pods-Friday.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		856612531B29A9BB002FD9FB = {
 			isa = PBXGroup;
 			children = (
 				8566125E1B29A9BB002FD9FB /* Friday */,
 				856612781B29A9BB002FD9FB /* FridayTests */,
 				8566125D1B29A9BB002FD9FB /* Products */,
+				5BB78424CDC00E61F4C155A0 /* Pods */,
+				B6DFB63569025DC08CC4AE84 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +122,8 @@
 				856612891B29B4FD002FD9FB /* DetailViewController.m */,
 				8566128B1B29B698002FD9FB /* BaseViewController.h */,
 				8566128C1B29B698002FD9FB /* BaseViewController.m */,
+				85EA6F601B2AB51E00ED7430 /* DetailTableViewCell.h */,
+				85EA6F611B2AB51E00ED7430 /* DetailTableViewCell.m */,
 			);
 			path = Friday;
 			sourceTree = "<group>";
@@ -142,6 +163,14 @@
 			path = ImageSlider;
 			sourceTree = "<group>";
 		};
+		B6DFB63569025DC08CC4AE84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30306E9E8F6B423C8E82F196 /* libPods-Friday.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8566127F1B29A9BB002FD9FB /* Build configuration list for PBXNativeTarget "Friday" */;
 			buildPhases = (
+				1BA76C8383BB7D252A210963 /* Check Pods Manifest.lock */,
 				856612581B29A9BB002FD9FB /* Sources */,
 				856612591B29A9BB002FD9FB /* Frameworks */,
 				8566125A1B29A9BB002FD9FB /* Resources */,
+				D40F22584F534B85A6D6F5A4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,6 +268,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1BA76C8383BB7D252A210963 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D40F22584F534B85A6D6F5A4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Friday/Pods-Friday-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		856612581B29A9BB002FD9FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -248,6 +312,7 @@
 				856612621B29A9BB002FD9FB /* main.m in Sources */,
 				8566128A1B29B4FD002FD9FB /* DetailViewController.m in Sources */,
 				856612941B29C17D002FD9FB /* ImageSliderView.m in Sources */,
+				85EA6F621B2AB51E00ED7430 /* DetailTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +436,7 @@
 		};
 		856612801B29A9BB002FD9FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB6B832FCB5B07A639738715 /* Pods-Friday.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Friday/Info.plist;
@@ -381,6 +447,7 @@
 		};
 		856612811B29A9BB002FD9FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C23F02628EDF1BC91D678E9 /* Pods-Friday.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Friday/Info.plist;
@@ -442,6 +509,7 @@
 				856612811B29A9BB002FD9FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		856612821B29A9BB002FD9FB /* Build configuration list for PBXNativeTarget "FridayTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +518,7 @@
 				856612841B29A9BB002FD9FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

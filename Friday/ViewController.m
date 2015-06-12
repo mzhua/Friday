@@ -76,6 +76,12 @@
 }
 
 #pragma mark - getter & setter
+/**
+ *  <#Description#>
+ *
+ *  @return <#return value description#>
+ */
+
 -(ImageSliderView *)imageSliderView{
     
     if(!_imageSliderView){//防止循环引用

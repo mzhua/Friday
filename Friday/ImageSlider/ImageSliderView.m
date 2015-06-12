@@ -50,12 +50,12 @@
     self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
     [self addSubview:self.scrollView];
     
-    self.scrollView.translatesAutoresizingMaskIntoConstraints = NO;
+//    self.scrollView.translatesAutoresizingMaskIntoConstraints = NO;
     self.scrollView.pagingEnabled = YES;//按一页一页滚动
-    self.scrollView.bounces = NO;
-    self.scrollView.showsHorizontalScrollIndicator = YES;
-    self.scrollView.showsVerticalScrollIndicator = NO;
-    self.scrollView.directionalLockEnabled = YES;
+//    self.scrollView.bounces = NO;
+//    self.scrollView.showsHorizontalScrollIndicator = YES;
+//    self.scrollView.showsVerticalScrollIndicator = NO;
+//    self.scrollView.directionalLockEnabled = YES;
     
     self.scrollView.delegate = self;
     
@@ -81,10 +81,15 @@
     for (int i = 0; i < images.count; i++) {
         startX = i * width;
         
+        
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(startX, 0, width, height)];
         imageView.contentMode = UIViewContentModeScaleAspectFit;//等比缩放，完全显示
+        //
         imageView.userInteractionEnabled = YES;
+        
         imageView.tag = i;
+        
+        
         [imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)]];
         
         UIImage *image = [images objectAtIndex:i];

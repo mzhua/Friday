@@ -7,10 +7,15 @@
 //
 
 #import "DetailViewController.h"
+#import "DetailTableViewCell.h"
 
-@interface DetailViewController ()<UIGestureRecognizerDelegate>
+@interface DetailViewController ()<UIGestureRecognizerDelegate,UITableViewDataSource,UITableViewDelegate>
+
+@property(nonatomic,strong) UITableView *tablView;
 
 @property(nonatomic,strong) UITapGestureRecognizer *tapGesture ;
+
+@property(nonatomic,strong) NSMutableArray *detailTableArray;
 
 @end
 
@@ -21,7 +26,17 @@
     // Do any additional setup after loading the view.
     //self.title = @"Detail";
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 50)];
+    self.tablView.delegate = self;
+    self.tablView.dataSource = self;
+    
+    UIImage *image = [UIImage imageNamed:]
+    
+    self.tablView.frame = CGRectMake(0, 0, self.view.frame.size.width, 200);
+    
+    [self.view addSubview:_tablView];
+    
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 300, self.view.frame.size.width, 50)];
     label.text = @"Detail";
     label.backgroundColor = [UIColor grayColor];
     label.textColor = [UIColor blackColor];
@@ -34,7 +49,7 @@
     
     _tapGesture.delegate = self;
     
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 180, 100, 30)];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 380, 100, 30)];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
     
@@ -47,13 +62,22 @@
     
     if (self.image) {
         UIImageView *imageView = [[UIImageView alloc] initWithImage:self.image];
-        imageView.frame = CGRectMake(0, 200, self.view.frame.size.width, 500);
+        imageView.frame = CGRectMake(0, 400, self.view.frame.size.width, 500);
         [self.view addSubview:imageView];
     }
-    
+    [self initDetailTableViewArray];
     
     [self.view addSubview:label];
     [self.view addSubview:button];
+}
+
+-(void)initDetailTableViewArray{
+    self.detailTableArray = [NSMutableArray array];
+    
+    for (int i = 0; i < 9; i++) {
+        NSString *title = [NSString stringWithFormat:@"title - %d",i];
+        [self.detailTableArray addObject:title];
+    }
 }
 
 -(void)onButtonClick{
@@ -68,6 +92,44 @@
     
     [alertView show];
     
+}
+
+#pragma mark UITableViewDelegate & UITableViewDataSource
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+
+    return self.detailTableArray.count;
+}
+
+// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
+// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *identifier = @"CellIdentity";
+    
+    //重用，防止内存溢出
+    DetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    
+    if(!cell){
+        cell = [[DetailTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell.titleLable.text = [_detailTableArray objectAtIndex:indexPath.row];
+        cell.backgroundColor = [UIColor redColor];
+        
+    }
+    
+    return cell;
+    
+}
+
+-(UITableView *)tablView{
+    if(!_tablView){
+        _tablView = [[UITableView alloc] init];
+    }
+    return _tablView;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
