@@ -29,7 +29,6 @@
     self.tablView.delegate = self;
     self.tablView.dataSource = self;
     
-    UIImage *image = [UIImage imageNamed:]
     
     self.tablView.frame = CGRectMake(0, 0, self.view.frame.size.width, 200);
     
